@@ -1,0 +1,12 @@
+header {
+	flex: 1 100%;
+	background-color: #6495ED;
+	font-weight:bold;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	font-size: xx-large
+}
+
+strong{
+	color: #6495ED;
+}

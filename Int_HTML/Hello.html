@@ -1,0 +1,342 @@
+<! --
+
+	writing a comment 
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- Title in the top of the browser -->
+		<title> Hello, world !!! </title> 
+		<link rel="stylesheet" type="text/css" href="styles/semantic.css" media="screen" />
+
+	</head>
+
+	<body>
+
+
+<div id="Begin">
+	<h2>***** Begin of Page ***** </h2>x
+	<p>
+		Hyperlinks to sections in the same page
+	</p>
+	<p>
+		<a href="#Division_id"> Go to Division </a>
+	</p>
+</div>
+
+
+
+<!-- Just to train by EDX cours Introduction to HTML and JS -->
+
+<div>
+    DIV is a block-level element
+    <p>
+        P is also a block-level element
+    </p>
+    <p>
+        Notice the text is rendered on new lines
+    </p>
+</div>
+<div>
+    Notice the text is rendered on new lines
+    <span>
+    SPAN is an inline element rendered on the same line
+    </span>
+	<h2>***** Formatting Elements Guide***** </h2>
+	<br />
+	<del>Deleted Text</del>
+	<br />
+	<i>Italic Text</i><b>Bold text <small>Small Text</small> <mark>Marked Text</mark>  
+	</b> 
+	<br /> <strong>Bold Text</strong> 
+	<br />
+	<ins>Inserted Text</ins>
+
+	<p>
+		Paragraph Text <sup>Superscript Text</sup> <sub>Subscript Text</sub>
+	</p>
+</div>
+
+
+<div style="background-color: lightblue">
+	<h2>***** Styling inline htm ... dont do that ***** </h2>
+	<p>
+		<font face="Consolas" size="32px" color="purple">
+			Every thing here is styled by font= Consolas, color=purple, size 32px 
+		</font>12:30 21/01/2018
+	</p>
+</div>
+
+
+<div>
+	<h2>***** Hyperlink  ***** </h2>
+	<p>
+		<a href="http://www.microsoft.com"></a>
+		<a href="http://www.microsoft.com">Link to Microsoft</a>
+		, target= blank => <a href="http://www.microsoft.com" target="_blank">Link to Microsoft</a>
+		, target= blank + Download => <a href="http://www.microsoft.com" target="_blank" download>http://www.microsoft.com</a>
+	</p>
+</div>
+
+<div>
+	<h2>***** Internal Hyperlinks ... sucesso***** </h2>
+	<p>
+		Hyperlinks to sections in the same page, to do this we need to to give a ("id") to a division, paragraph, etc than we    
+	use tag("<a>") to creat a link to the place where we identified.  
+	</p>
+	<p>
+		<a href="#Division_id"> Go to Division </a> Remember to put # before... 
+		<br />
+		<a href="#Begin"> go to begin of page </a>  # before...
+		<br />
+	</p>
+</div>
+
+
+
+
+<div>
+	<h2>***** Text area to Users ***** </h2>
+	<p>
+		<textarea rows="5" cols="70"> We live in a mobile-first and cloud-first world. Computing is ubiquitous, and experiences span devices and exhibit ambient intelligence.
+		</textarea>
+	</p>
+</div>
+
+
+<div>
+	<h2>***** Allow selection to Users**** </h2>
+	<p>
+	<select>
+    		<optgroup label="Data Platform">
+        		<option value="DAT202x">Processing Big Data with Azure HDInsight</option>
+        		<option value="DAT204x">Introduction to R Programming</option>
+    		</optgroup>
+    		<optgroup label="Cloud">
+        		<option value="CLD203x">Office 365: Managing Identities and Services</option>
+    		</optgroup>
+    		<optgroup label="Development">
+        		<option value="DEV208x">Introduction to jQuery</option>
+    		</optgroup>
+	</select>
+	</p>
+</div>
+
+
+
+<div>
+	<h2>***** Formulaire**** </h2>
+	<p>
+	<form>
+        <fieldset>
+            <legend>Text Data</legend>
+          First Name:<br />
+          <input type="text" name="firstName" value="" placeholder="Enter your First Name here" /><br />
+          Last Name:<br />
+          <input type="text" name="lastName" value="" placeholder="Enter your Last Name here" /><br />
+        </fieldset>
+        <fieldset>
+            <legend>Numeric Data</legend>
+          Age:<br />
+          <input type="range" name="age" min="0" max="100" value="25" /><br />
+          <br />
+        </fieldset>
+          <input type="submit" value="Click Me to Submit" />
+        </form>
+    </body>
+	</p>
+
+
+	<p>
+	<fieldset>
+    		<legend>Just a fieldset</legend>
+    				<br/>Just <br/> to see if it works
+		</fieldset>
+	</p>
+</div>
+
+
+
+<div>
+	<h2>***** Time element*** </h2>
+	        <p>
+            Your next appointment is on
+            <time datetime="2015-12-13T08:30:00-05:00">
+                <strong>December 12th at 08:30 AM</strong>
+            </time>.
+	    <br/> Now it can be used into JS and for other applications. 
+        </p>
+</div>
+
+
+
+<div>
+	<h2>***** SVG*** </h2>
+    <svg height="200" width="400">
+    <rect x="100" y="50" rx="20" ry="20" width="250" height="100" fill="#1B043C" />
+    <rect x="100" y="50" width="200" height="100" fill="#1B043C" />
+    <circle cx="100" cy="100" r="50" fill="#472772" />
+    <text fill="#D7BFF3" font-size="28" font-family="Segoe UI Light" x="160" y="108">CompanyName</text>
+</svg>
+<svg height="200" width="200">
+   <circle cx="150" cy="100" r="60" stroke="#322F41" stroke-width="5" fill="#5C647A" />
+</svg>
+
+<svg height="200" width="300">
+   <rect x="5" y="40" width="290" height="120" stroke="#617B69" stroke-width="5" fill="#96AD76"/>
+</svg>
+
+<svg height="200" width="300">
+   <polygon points="5,5 65,5 95,195 35,195" stroke="#54523F" stroke-width="5" fill="#EBE3C5" />
+</svg>
+</div>
+
+<audio autoplay="autoplay" controls="controls" loop="loop">
+    <source src="popopen.wav" type="audio/wav" />
+    <source src="popopen.ogg" type="audio/ogg" />
+    <source src="popopen.mp3" type="audio/mpeg" />
+</audio>
+<!--
+<video height="500" controls="controls" poster="screenshot.png">
+    <source src="advertisement.webm" type="audio/webm" />
+    <source src="advertisement.ogg" type="audio/ogg" />
+    <source src="advertisement.mp4" type="audio/mp4" />
+</video>
+
+-->
+
+<video width="300" height="200" poster="mod2_video.png" controls="controls">
+<source src="mod2_video.mp4" type="video/mp4" />
+The video tag is not supported by your current browser.
+</video>
+
+
+
+
+
+
+<br/>
+<span style="background-color: red;">This is the first line of text</span>
+<span style="background-color: green;">This is the second line of text</span>
+<br/>
+		Hello, World !!!
+		
+<!-- ------------------- PARAGRAPHS ----------- -->
+
+			 <title> Paragraphs!!! </title> 
+		<p>
+			OS qsldfkjq qmlsdkfj qmlskdjf qmlksdjf mqlkdfj
+		</p>
+			qpsdoifqpodisfuq 
+		
+<!-- -------------------BOLD AND BIG ----------- -->
+
+		<h1> One (put TITLE)</h1>
+		<h2> Two </h2>
+		<h3> three </h3>
+		<h4> Four .... </h4>
+
+
+<!-- -------------------MAKING LIST ----------- -->
+
+		<h3 style="text-align: center;" > Making list: </h3>
+		<ul> <!-- Un Ordered list (Bole)-->
+			<li> topic 1</li>
+			<li> topic 2 </li><li> 3 </li>
+		</ul>
+
+		<ol> <!-- Ordered list (Bole)-->
+			<li> topic 1</li>
+			<li> topic 2 </li><li> 3 </li>
+		</ol>
+		
+
+<!-- -------------------Images and Videos ----------- -->
+	<h3 style="text-align: center;" > Images and Videos (From internet and PC): </h3>
+		<!-- IMAGEM FORM INTERTET  -->
+		
+		<p> This is an image from internet (small): </p>
+<img width="50" height="80"  src = " http://www.clipartkid.com/images/247/3d-man-choice-k1OAD7-clipart.jpg "/> 
+
+		<p> This is an image from computador (ELISAMA/car.jpg): </p>
+<img width="70" height="110"  src = " ELISAMA/car.jpg"/> 
+
+		
+	
+		<!-- add youtube FORM INTERTET  -->
+		<p>
+			This is a youtube video:
+		</p>
+				
+			<iframe width="200" height="100"src="https://www.youtube.com/embed/V4aj94b5t1Y" frameborder="0" allowfullscreen></iframe>
+
+
+<!-- -------------------SEARCH BUTTON----------- -->
+	<h3 style="text-align: center;" > Search : </h3>
+	
+	<p>Searching using google: </p>
+	<form action="https://www.google.ca/search" method="get">
+		<input name="q", placeholder="Put text", type="text"/>
+		<input type="submit",valueof="Pequisa"/>
+	</form>
+
+
+
+<!-- -------------------Division----------- -->
+	<h3 id="Division_id" style="text-align: center;" > Divitions : </h3>
+<p>Next, every thing should be in the center because we created a main div and we put: style="text-align: center;
+</p>
+
+<p> Moreover, we added the style background-color: green, thus the divition must be green, remember I can do it in the "body" then every thing will be green </p>
+
+	<div style="text-align: center; background-color: green">
+	   <div style="font-size: 36px; font-weight:bold;">
+		 Vilmar Jefte
+	   </div>
+	   <div style="color: red; font-size: 24px; background-color: blue;">
+		 Vilmar Jefte (in red)
+	   </div>
+	   <div style="font-size: 12px;">
+		 Copyright: vilmaCA
+	   </div>
+
+	</div>
+
+
+<!-- ------------------ LINK ----------- -->
+<h3 style="text-align: center;" > 
+	LINK : 
+</h3>
+	<p>
+		<a href="https://www.youtube.com/">
+			https://www.youtube.com
+		</a>
+	</p>
+
+	<p>
+		Same ink <a href="https://www.youtube.com/"> 
+			SameLink to youtube
+		</a>
+	</p>
+
+Fake link 
+		<a href="https://www.google.com/">							https://www.youtube.com
+		</a>
+
+
+<!-- ------------------ PHP ----------- -->
+<h3 style="text-align: center;" > 
+	PHP : 
+</h3>
+
+<?php if(empty($_POST["name"])):?>
+	You must provide your name !!!
+<?php else:?>
+	You are registred. But, not really !!
+<?php endif ?>
+
+	</body>	
+</html>

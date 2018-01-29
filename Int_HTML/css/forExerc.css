@@ -1,0 +1,458 @@
+section, header, footer{
+   margin:20px 0px;
+}
+
+
+
+
+div > h2{
+  text-align: center;
+  text-shadow: black;
+}
+
+main.StyleMainWithNav{
+  margin-left: 15% !important;
+  padding:0px 0px;
+}
+
+div {
+  border: 5px black solid;
+}
+.border{
+  border: 1px black solid;
+}
+/*Creatin a function in css*/
+.grayBackground{
+	background-color: #F0F2F1;
+}
+
+/*only applied for section*/
+section.section2 {
+	padding: 20px;
+	margin: 20px;
+}
+
+.title {
+background-color: #A6BE9E;
+font-weight: bold;
+}
+
+.brand {
+background-color: #082833;
+color: #C24726;
+font-weight: bold;
+font-size: x-large;
+}
+
+.article {
+background-color: #357074;
+color: #FFF3BC;
+font-size: x-small;
+}
+
+
+/*Implement specifics attibuts to specifics elements */
+/*only applied for header, but we have to call this class on html */
+header.grayBackground{
+	font-weight: bold;
+	font-size:2em;
+	text-align: center;
+}
+
+body {
+    background-color: #fbf8e5;
+    color: #6e7d9e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+     background: linear-gradient(#051118, #5C373C);
+    border: thin #CAA893 inset;
+    margin: 20px 30px;
+    padding: 10px 20px;
+    color: #CAA893;
+    border: thin #CAA893 inset;
+    margin: 20px 30px;
+}
+footer {
+    background-color: #A5B7C5;
+    padding: 5px 10px;
+    font-style: italic;
+}
+
+
+/*
+                Directy descendant of elemtnts
+  This selector selects only elements that are a direct descendant of the first element specified.
+*/
+header > h1 {
+    letter-spacing: 5px;
+    letter-size: xx-large;
+}
+article > h2 {
+    font-weight: bolder;
+}
+article > h2::before {
+    content: "\002329";
+    color: #F9C989;
+}
+article > h2::after {
+    content: "\00232A";
+    color: #F9C989;
+}
+
+
+/*
+        CSS  - Child Style Selectors
+*/
+
+/*  Indirect Descendant Selector
+This selector selects any element that is a descendant of the first element specified.*/
+section p {
+  font-family: monospace;
+  font-size:3em;
+}
+/*  Direct Descendant Selector
+This selector selects only elements that are a direct descendant of the first element specified.
+This selector is useful if you want to narrow the scope of your style only to a specific descendant.*/
+section > p {
+  font-weight: bold;
+}
+
+/*You can nest multiple direct selectors if you want to "drill" deeper and select another P element.*/
+section > article > aside > p {
+  text-align: center;
+}
+
+/*Hybrid */
+section > article p {
+  font-style: italic;
+}
+
+section > article >  p:last-child {
+  font-weight: bold;
+  color: blue;
+}
+
+/*
+* Style Inheritance Order
+*/
+
+section >  p:last-child {
+    color: red !important; /* keyword !important to override existing CSS declarations (styles)
+                             and skip to the front of the order of inheritance.*/
+}
+
+section > p:last-child {
+  font-weight: bold;
+  color: blue;
+}
+
+
+
+/************* Navigagion links  ***
+*
+*
+*
+*/
+
+.NavTest {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+nav.NavTest2 {
+    font-weight: bold;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+
+}
+
+@media print { /*The not keyword inverses the logic in a media query.*/
+    nav.NavTest2 {
+       display: none !important;
+    }
+    main.StyleMainWithNav{
+      margin: 0 !important;
+    }
+}
+nav > a {
+    display: flex; /*block, inline, flex */
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+nav > a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/*
+    *  MARGIN AND PADDING
+
+
+        • The margin(or padding)-bottom defines the bottom margin of an element.
+        • The margin(padding)-top defines the top margin of an element.
+        • The margin-left defines the left margin of an element
+        • The margin-right defines the right margin of an element.
+CSS margin (or padding): 4 values If all the four values are declared i.e. margin: 10px 10px 10px 10px;, corresponding order will be as follows; top, right, bottom, left.
+
+*/
+article.paddlingEx {
+   border: 3px black solid;
+   padding: 10px 300px 30px 20px;
+}
+article.Dashedborder_Ex{
+  border-width: thick;
+  border-color: #6902E7;
+  border-style: dashed;
+}
+
+section.ComplexBorder{
+  border-width: 13px;
+  border-color: #F38630;
+  border-style: outset;; /* solid,  grrove, hidden, none, double, dashed, ridge, inset, outset (can use more than one at same time)*/
+  background-color: #6902E7;
+  color:  black; /*Letter color */
+}
+.P_and_M_Ex{
+margin: 10px 20px;
+padding: 20px 10px;
+}
+
+
+/*
+*       CSS Media Queries (@media)
+*
+*     Change page web based on proprieties of browser
+        types:
+          screen: pplied only if the user is looking at the browser through a screen
+          print : is applied only if the user is attempting to print the page.
+          speech : is applied only if the user is using a screen reader.
+
+      Widths:
+          (min(max)-width(height): 500px) :  ONLY if the browser is at least(most) 500 pixels width (height)
+
+      Simple Media Query Logic: AND and OR (see example bellow )
+
+  Optionally (put in head):
+      <head>
+        <link rel="stylesheet" href="base.css" />
+        <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1000px)" />
+        <link rel="stylesheet" href="print.css" media="print" />
+      </head>
+*/
+
+@media print { /*pplied only if the user is looking at the browser through a screen*/
+    body.Vermelho {
+        background-color: red;
+    }
+}
+/* Media widths*/
+@media (min-width: 500px) {
+    nav.WidthMEdia {
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 500px) {
+    article.fontExt {
+        font-style: italic;
+    }
+}
+
+@media all { /*The all keyword specifies that a media query should be used with all device types (screen, speech, print)*/
+    body > article.zuando {
+        font-family: serif;
+    }
+}
+
+@media not speech { /*The not keyword inverses the logic in a media query.*/
+    body > section.screenReaderOverview5 {
+        display: none;
+    }
+}
+
+.HandOn4{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #506566;
+}
+
+aside.MediaQ_Ex {
+background-color: #23354B;
+color: #CDB09E;
+padding: 25px;
+margin: 5px;
+}
+
+nav.MediaQ_Ex {
+display: flex;
+}
+
+nav > aside {
+flex: 1;
+}
+
+@media (max-width: 500px) {
+nav.MediaQ_Ex {
+    display: block;
+}
+}
+
+/** on GoogleCrome press Ctrl + P ... see changes on printing mode */
+  @media print {
+  nav.MediaQ_Ex {
+      display: block;
+  }
+  body {
+      background-color: white !important;
+      font-family: 'Times New Roman', Times, serif !important;
+  }
+  aside {
+      border: 3px black solid;
+      background-color: white;
+      color: black;
+      padding: 10px;
+      margin: 5px;
+      display: block;
+  }
+}
+
+
+/*
+*       Font
+*/
+section.FontChange{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, monospace; /*Insert options of fonts*/
+}
+
+@font-face {
+font-family: Caveat;
+src: url('../fonts/mod3_caveat.ttf') format('truetype');
+}
+
+section.ExternalFontCaveat{
+  font-family: Caveat; /*Insert options of fonts*/
+}
+
+@font-face {
+font-family: Chonburi;
+src: url('../fonts/mod3_chonburi.ttf') format('truetype');
+}
+
+section.ExternalFontChonburi{
+  font-family: Chonburi; /*Insert options of fonts*/
+}
+
+
+
+/*
+*       Homework from module 3
+*/
+
+/*Creating font */
+@font-face {
+  font-family: 'News Cycle';
+  src: url('../fonts/mod3_news_cycle.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Contrail One';
+  src: url('../fonts/mod3_contrail_one.ttf') format('truetype');
+}
+
+
+@media not print { /*Colors only read and screen*/
+
+  div.HWStyle {
+    color: #635959;
+  }
+
+  div.HWStyle  header{
+    background-color: #242323;
+    color: #EFEFEF;
+  }
+
+  div.HWStyle h3, div.HWStyle article  h4 {
+    color: #8C1018;
+  }
+  div.HWStyle article  a {
+    color: #314052;
+  }
+
+  div.HWStyle  main > h3{
+    font-size: 2em;
+  }
+}
+
+@media print {
+  div.HWStyle {
+    margin-left: 0% !important;
+  }
+  div.HWStyle header {
+    padding: 0px !important;
+  }
+   div.HWStyle article {
+    box-shadow: none !important;
+  }
+  div.HWStyle header h1 {
+    font-size: 2em !important;
+  }
+  div.HWStyle header h2 {
+    display: none !important;
+  }
+}/*End of media print*/
+
+
+div.HWStyle {
+  margin-left: 15%;
+  font-family: 'News Cycle';
+}
+div.HWStyle  header{
+  padding: 20px 50px;
+  font-family: 'Contrail One';
+}
+
+div.HWStyle  main {
+  padding:  5px 10px;
+}
+
+div.HWStyle  article{
+  margin: 5px 0px;
+  padding: 5px 5px;
+  box-shadow: -1px -1px 6px #888888; /*Shadow For Each Article*/
+}
+
+
+div.HWStyle header h1 {
+  font-size: 4em
+}
+
+div.HWStyle  figure > figcaption {
+    font-size: 0.75em;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.HWStyle  figure > figcaption::before {
+    content: 'Pictured above: '
+    font-weight: bold
+}
+
+div.HWStyle  article > time {
+  float: right;
+  font-size: 0.75em;
+  font-weight: lighter;
+}
