@@ -1,4 +1,7 @@
 # WebStarter
 Html, CSS, JavaScript
 
-Just insert in any directory and have fun !!! 
+Set intHTML in a directory and have fun !!!
+
+
+
